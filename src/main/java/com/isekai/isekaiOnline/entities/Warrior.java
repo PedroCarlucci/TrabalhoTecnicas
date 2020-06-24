@@ -9,9 +9,13 @@ public class Warrior extends Character{
         }
         this.stats = stats;
         this.level = level;
-
+        stats[5] = calcHP();
     }
     protected int calcHP(){
-        return stats[5] * 8 + 8;
+        return stats[2] * 8 + 8;
+    }
+
+    protected int calcMP(){
+        return stats[4] * 5 + 6;
     }
 }

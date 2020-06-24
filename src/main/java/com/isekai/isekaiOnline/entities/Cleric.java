@@ -9,9 +9,14 @@ public class Cleric extends Character{
         }
         this.stats = stats;
         this.level = level;
-
+        stats[5] = calcHP();
     }
+    
     protected int calcHP(){
-        return stats[5] * 6 + 8;
+        return stats[2] * 6 + 8;
+    }
+
+    protected int calcMP(){
+        return stats[4] * 6 + 10;
     }
 }

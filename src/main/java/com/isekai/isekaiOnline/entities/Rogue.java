@@ -9,9 +9,13 @@ public class Rogue extends Character{
         }
         this.stats = stats;
         this.level = level;
-
+        stats[5] = calcHP();
     }
     protected int calcHP(){
-        return stats[5] * 6 + 6;
+        return stats[2] * 6 + 6;
+    }
+
+    protected int calcMP(){
+        return stats[4] * 6 + 8;
     }
 }

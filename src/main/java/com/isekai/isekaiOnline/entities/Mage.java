@@ -9,9 +9,13 @@ public class Mage extends Character{
         }
         this.stats = stats;
         this.level = level;
-
+        stats[5] = calcHP();
     }
     protected int calcHP(){
-        return stats[5] * 4 + 4;
+        return stats[2] * 4 + 4;
+    }
+
+    protected int calcMP(){
+        return stats[4] * 7 + 12;
     }
 }
